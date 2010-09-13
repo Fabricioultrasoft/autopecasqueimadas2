@@ -43,20 +43,22 @@ public class Tela_Principal extends javax.swing.JFrame {
 
         timer1 = new org.netbeans.examples.lib.timerbean.Timer();
         jPanel1 = new javax.swing.JPanel();
-        jButton_produtos = new javax.swing.JButton();
-        jButton_sair = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        botao_entrada_mat = new javax.swing.JButton();
+        botao_sair = new javax.swing.JButton();
+        botao_vendas = new javax.swing.JButton();
         jLabel_hora = new javax.swing.JLabel();
         jLabel_data = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel_nome_sistema = new javax.swing.JLabel();
+        jLabel_cont_estoque = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu_cadastros = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem_cad_clientes = new javax.swing.JMenuItem();
+        jMenuItem_Cad_Fabricantes = new javax.swing.JMenuItem();
+        jMenuItem_cad_Fornecedores = new javax.swing.JMenuItem();
+        jMenuItem_cad_Funcionarios = new javax.swing.JMenuItem();
+        jMenuItem_cad_Grupos = new javax.swing.JMenuItem();
+        jMenuItem_Cad_Produto = new javax.swing.JMenuItem();
+        jMenuItem_sair = new javax.swing.JMenuItem();
         jMenu_sair = new javax.swing.JMenu();
 
         timer1.addTimerListener(new org.netbeans.examples.lib.timerbean.TimerListener() {
@@ -70,24 +72,24 @@ public class Tela_Principal extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jButton_produtos.setFont(new java.awt.Font("Arial", 0, 12));
-        jButton_produtos.setText("Entrada de Material");
-        jButton_produtos.addActionListener(new java.awt.event.ActionListener() {
+        botao_entrada_mat.setFont(new java.awt.Font("Arial", 0, 12));
+        botao_entrada_mat.setText("Entrada de Material");
+        botao_entrada_mat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_produtosActionPerformed(evt);
+                botao_entrada_matActionPerformed(evt);
             }
         });
 
-        jButton_sair.setFont(new java.awt.Font("Arial", 0, 12));
-        jButton_sair.setText("Sair");
-        jButton_sair.addActionListener(new java.awt.event.ActionListener() {
+        botao_sair.setFont(new java.awt.Font("Arial", 0, 12));
+        botao_sair.setText("Sair");
+        botao_sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_sairActionPerformed(evt);
+                botao_sairActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 12));
-        jButton1.setText("Vendas");
+        botao_vendas.setFont(new java.awt.Font("Arial", 0, 12));
+        botao_vendas.setText("Vendas");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -96,67 +98,97 @@ public class Tela_Principal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_produtos, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_sair, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
+                    .addComponent(botao_vendas, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_entrada_mat, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botao_sair, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton_produtos});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {botao_entrada_mat, botao_vendas});
 
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(jButton_produtos, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botao_entrada_mat, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botao_vendas, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton_sair)
+                .addComponent(botao_sair)
                 .addContainerGap(383, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton_produtos, jButton_sair});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {botao_entrada_mat, botao_sair, botao_vendas});
 
         jLabel_hora.setText("hora");
 
         jLabel_data.setText("data");
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 48));
-        jLabel1.setText("EstoqueTools");
+        jLabel_nome_sistema.setFont(new java.awt.Font("Times New Roman", 0, 48));
+        jLabel_nome_sistema.setText("EstoqueTools");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18));
-        jLabel2.setText("Controle de Estoque");
+        jLabel_cont_estoque.setFont(new java.awt.Font("Times New Roman", 0, 18));
+        jLabel_cont_estoque.setText("Controle de Estoque");
 
         jMenuBar1.setBackground(new java.awt.Color(0, 204, 51));
 
         jMenu_cadastros.setBackground(new java.awt.Color(0, 204, 0));
         jMenu_cadastros.setText("Cadastros");
 
-        jMenuItem3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem3.setText("Cadastro de Produtos");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+        jMenuItem_cad_clientes.setFont(new java.awt.Font("Arial", 0, 14));
+        jMenuItem_cad_clientes.setIcon(new javax.swing.ImageIcon("C:\\icones\\cliente.gif")); // NOI18N
+        jMenuItem_cad_clientes.setText("Cadastro de Clientes");
+        jMenu_cadastros.add(jMenuItem_cad_clientes);
+
+        jMenuItem_Cad_Fabricantes.setFont(new java.awt.Font("Arial", 0, 14));
+        jMenuItem_Cad_Fabricantes.setIcon(new javax.swing.ImageIcon("C:\\icones\\tool.gif")); // NOI18N
+        jMenuItem_Cad_Fabricantes.setText("Cadastro de Fabricantes");
+        jMenuItem_Cad_Fabricantes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem_Cad_FabricantesMousePressed(evt);
             }
         });
-        jMenu_cadastros.add(jMenuItem3);
+        jMenu_cadastros.add(jMenuItem_Cad_Fabricantes);
 
-        jMenuItem1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem1.setText("Cadastro de Clientes");
-        jMenu_cadastros.add(jMenuItem1);
+        jMenuItem_cad_Fornecedores.setFont(new java.awt.Font("Arial", 0, 14));
+        jMenuItem_cad_Fornecedores.setIcon(new javax.swing.ImageIcon("C:\\icones\\fornecedor2.png")); // NOI18N
+        jMenuItem_cad_Fornecedores.setText("Cadastro de Fornecedores");
+        jMenuItem_cad_Fornecedores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem_cad_FornecedoresMousePressed(evt);
+            }
+        });
+        jMenu_cadastros.add(jMenuItem_cad_Fornecedores);
 
-        jMenuItem2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem2.setText("Cadastro de Fornecedores");
-        jMenu_cadastros.add(jMenuItem2);
+        jMenuItem_cad_Funcionarios.setFont(new java.awt.Font("Arial", 0, 14));
+        jMenuItem_cad_Funcionarios.setIcon(new javax.swing.ImageIcon("C:\\icones\\icone_cadastro_cliente.jpg")); // NOI18N
+        jMenuItem_cad_Funcionarios.setText("Cadastro de Funcionários");
+        jMenu_cadastros.add(jMenuItem_cad_Funcionarios);
 
-        jMenuItem4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem4.setText("Cadastro de Funcionários");
-        jMenu_cadastros.add(jMenuItem4);
+        jMenuItem_cad_Grupos.setFont(new java.awt.Font("Arial", 0, 14));
+        jMenuItem_cad_Grupos.setIcon(new javax.swing.ImageIcon("C:\\icones\\grupo.png")); // NOI18N
+        jMenuItem_cad_Grupos.setText("Cadastro de Grupos");
+        jMenuItem_cad_Grupos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItem_cad_GruposMousePressed(evt);
+            }
+        });
+        jMenu_cadastros.add(jMenuItem_cad_Grupos);
 
-        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jMenuItem5.setText("Sair");
-        jMenu_cadastros.add(jMenuItem5);
+        jMenuItem_Cad_Produto.setFont(new java.awt.Font("Arial", 0, 14));
+        jMenuItem_Cad_Produto.setIcon(new javax.swing.ImageIcon("C:\\icones\\produto.gif")); // NOI18N
+        jMenuItem_Cad_Produto.setText("Cadastro de Produtos");
+        jMenuItem_Cad_Produto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_Cad_ProdutoActionPerformed(evt);
+            }
+        });
+        jMenu_cadastros.add(jMenuItem_Cad_Produto);
+
+        jMenuItem_sair.setFont(new java.awt.Font("Arial", 0, 14));
+        jMenuItem_sair.setIcon(new javax.swing.ImageIcon("C:\\icones\\sair2.gif")); // NOI18N
+        jMenuItem_sair.setText("Sair");
+        jMenu_cadastros.add(jMenuItem_sair);
 
         jMenuBar1.add(jMenu_cadastros);
 
@@ -187,20 +219,20 @@ public class Tela_Principal extends javax.swing.JFrame {
                             .addContainerGap(595, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabel1)
+                            .addComponent(jLabel_nome_sistema)
                             .addGap(182, 182, 182)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
+                        .addComponent(jLabel_cont_estoque)
                         .addGap(238, 238, 238))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(250, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel_nome_sistema, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(jLabel_cont_estoque)
                 .addGap(199, 199, 199)
                 .addComponent(jLabel_data)
                 .addGap(4, 4, 4)
@@ -232,7 +264,7 @@ public class Tela_Principal extends javax.swing.JFrame {
         jLabel_hora.setText(mostra_data.hora);
     }//GEN-LAST:event_timer1OnTime
 
-    private void jButton_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_sairActionPerformed
+    private void botao_sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_sairActionPerformed
         // Evento do botão sair
         try {
             String pergunta = "Tem certeza que deseja sair do sistema?";
@@ -243,35 +275,50 @@ public class Tela_Principal extends javax.swing.JFrame {
         }catch(Exception erro){
             JOptionPane.showMessageDialog(null, "Erro ao fechar o sistema! "+erro);
         }
-}//GEN-LAST:event_jButton_sairActionPerformed
+}//GEN-LAST:event_botao_sairActionPerformed
 
-    private void jButton_produtosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_produtosActionPerformed
+    private void botao_entrada_matActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_entrada_matActionPerformed
         // evento do botão entrada de material
         new Entrada_material().show();
-    }//GEN-LAST:event_jButton_produtosActionPerformed
+    }//GEN-LAST:event_botao_entrada_matActionPerformed
 
     private void jMenuItem_cad_fornecedorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem_cad_fornecedorMousePressed
         // evento do botao jMenuItem_cad_fornecedor
         new Cad_fornecedor().show();
     }//GEN-LAST:event_jMenuItem_cad_fornecedorMousePressed
 
-    private void jMenuItem_sairMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem_sairMousePressed
-         // Evento do jmenu_sair
+    private void jMenuItem_Cad_ProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_Cad_ProdutoActionPerformed
+        new Cad_produto().show();
+        // chamada da tela cad_produto
+    }//GEN-LAST:event_jMenuItem_Cad_ProdutoActionPerformed
+
+    private void jMenuItem_sairMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem5MousePressed
+    // Evento do botão sair
         try {
-            String nome = "Tem certeza que deseja sair do sistema?";
-            int opcao_escolhida = JOptionPane.showConfirmDialog(null, nome, "Sair", JOptionPane.YES_NO_OPTION);
+            String pergunta = "Tem certeza que deseja sair do sistema?";
+            int opcao_escolhida = JOptionPane.showConfirmDialog(null, pergunta, "Sair", JOptionPane.YES_NO_OPTION);
             if(opcao_escolhida == JOptionPane.YES_OPTION){
                 System.exit(0);
             }
         }catch(Exception erro){
             JOptionPane.showMessageDialog(null, "Erro ao fechar o sistema! "+erro);
         }
-    }//GEN-LAST:event_jMenuItem_sairMousePressed
+    }//GEN-LAST:event_jMenuItem5MousePressed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        new Cad_produto().show();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void jMenuItem_cad_GruposMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem_cad_GruposMousePressed
+        //chamada da tela cad_grupos
+        new Cad_Grupo().show();
+    }//GEN-LAST:event_jMenuItem_cad_GruposMousePressed
+
+    private void jMenuItem_cad_FornecedoresMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem_cad_FornecedoresMousePressed
+        //chamada da tela cad_fornecedores
+        new Cad_fornecedor().show();
+    }//GEN-LAST:event_jMenuItem_cad_FornecedoresMousePressed
+
+    private void jMenuItem_Cad_FabricantesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem_Cad_FabricantesMousePressed
+       //chamada da tela fabricante
+        new Cad_fabricante().show();
+    }//GEN-LAST:event_jMenuItem_Cad_FabricantesMousePressed
 
     /**
     * @param args the command line arguments
@@ -285,19 +332,21 @@ public class Tela_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton_produtos;
-    private javax.swing.JButton jButton_sair;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton botao_entrada_mat;
+    private javax.swing.JButton botao_sair;
+    private javax.swing.JButton botao_vendas;
+    private javax.swing.JLabel jLabel_cont_estoque;
     private javax.swing.JLabel jLabel_data;
     private javax.swing.JLabel jLabel_hora;
+    private javax.swing.JLabel jLabel_nome_sistema;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem_Cad_Fabricantes;
+    private javax.swing.JMenuItem jMenuItem_Cad_Produto;
+    private javax.swing.JMenuItem jMenuItem_cad_Fornecedores;
+    private javax.swing.JMenuItem jMenuItem_cad_Funcionarios;
+    private javax.swing.JMenuItem jMenuItem_cad_Grupos;
+    private javax.swing.JMenuItem jMenuItem_cad_clientes;
+    private javax.swing.JMenuItem jMenuItem_sair;
     private javax.swing.JMenu jMenu_cadastros;
     private javax.swing.JMenu jMenu_sair;
     private javax.swing.JPanel jPanel1;
