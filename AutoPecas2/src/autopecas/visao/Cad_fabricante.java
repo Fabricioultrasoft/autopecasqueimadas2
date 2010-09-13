@@ -21,12 +21,12 @@ import javax.swing.text.MaskFormatter;
  *
  * @author Kelly
  */
-public class Cad_fornecedor extends javax.swing.JFrame {
+public class Cad_fabricante extends javax.swing.JFrame {
 
     data mostra_data;//variavel que vai chamar os metodos da data e hora
     MaskFormatter formatoCnpj, formatoCep, formatoFone, formatoData;
     /** Creates new form Cad_produto */
-    public Cad_fornecedor() {
+    public Cad_fabricante() {
         initComponents();
 
         mostra_data = new data();//objeto inicializado
@@ -109,7 +109,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro de Fornecedor");
+        setTitle("Cadastro de Fabricante");
 
         jLabel_codigo.setFont(new java.awt.Font("Arial", 0, 14));
         jLabel_codigo.setText("Código:");
@@ -481,7 +481,7 @@ public class Cad_fornecedor extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cad_fornecedor().setVisible(true);
+                new Cad_fabricante().setVisible(true);
             }
         });
     }
